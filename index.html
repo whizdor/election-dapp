@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voting DApp</title>
+    <script src="main.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.1.umd.min.js"
+        type="application/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Decentralized Voting Application</h1>
+
+        <button onclick="connectMetamask()">Connect Metamask</button>
+        <p id="metamasknotification"></p>
+    </div>
+
+    <div class="container">
+        <span>Candidates:</span>
+        <ul>
+            <li id="candidate1">Pratham Shau: <span id="votes1">0</span></li>
+            <li id="candidate2">Devansh Jain: <span id="votes2">0</span></li>
+            <li id="candidate3">Rahul Jha: <span id="votes3">0</span></li>
+            <li id="candidate4">Ridin Datta: <span id="votes4">0</span></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <span>Vote here</span>
+        <select id="firstChoice">
+            <option value="1">Pratham Shau</option>
+            <option value="2">Devansh Jain</option>
+            <option value="3">Rahul Jha</option>
+            <option value="4">Ridin Datta</option>
+        </select>
+
+        <select id="secondChoice">
+            <option value="1">Pratham Shau</option>
+            <option value="2">Devansh Jain</option>
+            <option value="3">Rahul Jha</option>
+            <option value="4">Ridin Datta</option>
+        </select>
+
+        <select id="thirdChoice">
+            <option value="1">Pratham Shau</option>
+            <option value="2">Devansh Jain</option>
+            <option value="3">Rahul Jha</option>
+            <option value="4">Ridin Datta</option>
+        </select>
+
+        <button onclick="addVote()">Submit Vote</button>
+    </div>
+
+    <div class="container">
+        <button onclick="voteStatus()">Check Voting Status</button>
+        <p id="status"></p>
+        <p id="time"></p>
+    </div>
+
+</body>
+</html>
